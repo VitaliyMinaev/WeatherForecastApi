@@ -18,7 +18,7 @@ var password = builder.Configuration["DbPassword"] ?? "BilliJin2000";
 var database = builder.Configuration["Database"] ?? "WeatherForecast";
 
 builder.Services.AddDbContext<WeatherForecastContext>(options =>
-    options.UseSqlServer($"Server={server}:{port}; Initial Catalog={database}; " +
+    options.UseSqlServer($"Server={server}{port}; Initial Catalog={database}; " +
     $"User ID={user}; Password={password}"));
 
 var app = builder.Build();

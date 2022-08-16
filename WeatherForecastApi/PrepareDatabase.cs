@@ -11,7 +11,6 @@ namespace WeatherForecastApi
             using(var serviceScope = applicationBuilder.ApplicationServices.CreateScope())
             {
                 var context = serviceScope.ServiceProvider.GetService<WeatherForecastContext>();
-
                 SeedData(context, logger);
             }
         }
